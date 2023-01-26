@@ -5,10 +5,7 @@ import com.springsecurity.security.dto.MemberSignupRequestDto;
 import com.springsecurity.security.service.AuthService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/auth")
@@ -27,5 +24,10 @@ public class AuthController {
 
         return authService.signup(request);
 
+    }
+
+    @GetMapping("test")
+    public String test() {
+        return "test";
     }
 }

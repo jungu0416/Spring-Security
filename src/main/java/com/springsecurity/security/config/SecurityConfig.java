@@ -39,8 +39,19 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity httpSecurity) throws Exception {
         httpSecurity.authorizeHttpRequests()
                 .antMatchers("/auth/**").permitAll()  // login 없이 접근 허용 하는 url
+                .antMatchers("/h2-console/**").permitAll()
                 .antMatchers("/admin").hasRole("ADMIN") // '/admin'의 경우 ADMIN 권한이 있는 사용자만 접근이 가능
-                .anyRequest().authenticated(); // 그 외 모든 요청은 인증과정 필요
+                .anyRequest().authenticated()// 그 외 모든 요청은 인증과정 필요
+                .and()
+                .headers()
+                .frameOptions()
+                .disable()
+                .and()
+                .csrf()
+                .ignoringAntMatchers("/h2-console/**")
+                .disable() // POST 메소드 안되서 CSRF 비활성화
+                ;
+
     }
 
     @Override
