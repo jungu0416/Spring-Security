@@ -8,7 +8,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/auth")
+@RequestMapping("/member")
 @AllArgsConstructor
 public class MemberController {
     private final MemberService memberService;

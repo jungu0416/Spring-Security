@@ -8,9 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/admin")
 public class AdminController {
 
-    @GetMapping("/admin")
+    @GetMapping("/signup")
     public String admin() {
-        return "admin";
+        return "adminLogin";
     }
 
 }

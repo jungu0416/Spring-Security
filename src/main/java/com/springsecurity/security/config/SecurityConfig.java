@@ -40,7 +40,8 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.authorizeHttpRequests()
                 .antMatchers("/auth/**").permitAll()  // login 없이 접근 허용 하는 url
                 .antMatchers("/h2-console/**").permitAll()
-                .antMatchers("/admin/*").hasRole("ADMIN") // '/admin'의 경우 ADMIN 권한이 있는 사용자만 접근이 가능
+                .antMatchers("/main/**").permitAll()
+                .antMatchers("/admin/**").hasRole("ADMIN") // '/admin'의 경우 ADMIN 권한이 있는 사용자만 접근이 가능
                 .anyRequest().authenticated()// 그 외 모든 요청은 인증과정 필요
                 .and()
                 .headers()
