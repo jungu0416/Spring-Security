@@ -1,7 +1,7 @@
-package com.springsecurity.security.service;
+package com.springsecurity.security.member.service;
 
-import com.springsecurity.security.domain.Member;
-import com.springsecurity.security.repository.MemberRepository;
+import com.springsecurity.security.core.domain.member.Member;
+import com.springsecurity.security.core.repository.member.MemberRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

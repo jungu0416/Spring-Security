@@ -1,9 +1,9 @@
-package com.springsecurity.security.service;
+package com.springsecurity.security.member.service;
 
-import com.springsecurity.security.domain.Member;
-import com.springsecurity.security.dto.JwtRequestDto;
-import com.springsecurity.security.repository.MemberRepository;
-import com.springsecurity.security.dto.MemberSignupRequestDto;
+import com.springsecurity.security.core.domain.member.Member;
+import com.springsecurity.security.member.request.JwtRequestDto;
+import com.springsecurity.security.core.repository.member.MemberRepository;
+import com.springsecurity.security.member.request.MemberSignupRequestDto;
 import lombok.AllArgsConstructor;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 @AllArgsConstructor
 @Transactional
-public class AuthService {
+public class MemberService {
 
     private final MemberRepository memberRepository;
     private final PasswordEncoder passwordEncoder;

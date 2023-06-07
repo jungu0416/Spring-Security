@@ -1,8 +1,7 @@
-package com.springsecurity.security.domain;
+package com.springsecurity.security.core.domain.member;
 
-import com.springsecurity.security.dto.MemberSignupRequestDto;
-import com.springsecurity.security.model.Role;
-import lombok.Builder;
+import com.springsecurity.security.member.request.MemberSignupRequestDto;
+import com.springsecurity.security.core.domain.type.Role;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

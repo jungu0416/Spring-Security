@@ -1,4 +1,4 @@
-package com.springsecurity.security.dto;
+package com.springsecurity.security.member.request;
 
 import lombok.Getter;
 import lombok.Setter;

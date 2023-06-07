@@ -1,4 +1,4 @@
-package com.springsecurity.security.model;
+package com.springsecurity.security.core.domain.type;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

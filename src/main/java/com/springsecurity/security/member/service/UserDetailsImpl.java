@@ -1,7 +1,7 @@
-package com.springsecurity.security.service;
+package com.springsecurity.security.member.service;
 
-import com.springsecurity.security.domain.Member;
-import com.springsecurity.security.model.Role;
+import com.springsecurity.security.core.domain.member.Member;
+import com.springsecurity.security.core.domain.type.Role;
 import lombok.AllArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
